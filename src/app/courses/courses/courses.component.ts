@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class CoursesComponent implements OnInit {
 
-  courses: Observable<Course[]>;
+  courses$: Observable<Course[]>; // Precisa iniciar a variavel dentro do construtor;
 
   displayedColumns = ['name', 'category'];
 
@@ -20,7 +20,7 @@ export class CoursesComponent implements OnInit {
   constructor(private CoursesService: CoursesService) {
    // this.CoursesService = new CoursesService();
 
-   this.courses = this.CoursesService.list();
+   this.courses$ = this.CoursesService.list();
 
   }
 
