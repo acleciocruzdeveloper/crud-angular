@@ -20,6 +20,5 @@ export class CoursesService {
       delay(5000),
       tap(courses => console.log(courses))
     );
-
   }
 }
